@@ -1,0 +1,39 @@
+---
+title: "Fifa2018"
+author: "Freddy Hernandez"
+date: "11 de mayo de 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Fifa 2018
+
+![Juego Fifa 2018](fifa.jpg)
+
+## Cargando los datos
+La base datos que se analiza aquí fue tomada de https://www.kaggle.com/thec03u5/fifa-18-demo-player-dataset/data.
+
+```{r, message=FALSE}
+require(readr)
+dt <- read_csv("complete.csv")
+dim(dt)
+```
+
+## Explorando la base
+
+```{r, message=FALSE}
+require(ggplot2)
+ggplot(dt, aes(age)) + geom_density(kernel = "gaussian")
+```
+
+```{r}
+ggplot(dt, aes(weight_kg, height_cm)) + geom_point() +
+   geom_smooth(method=lm, se=TRUE)
+```
+
+
+
+
