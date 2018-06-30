@@ -13,3 +13,6 @@ require(dplyr)
 dt %>% arrange(desc(beer))
 dt %>% arrange(desc(spirit))
 dt %>%  arrange(desc(wine))
+
+# How is Colombia
+dt %>% filter(country == 'Colombia')
