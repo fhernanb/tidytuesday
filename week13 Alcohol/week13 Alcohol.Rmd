@@ -2,9 +2,9 @@
 title: "Alcohol consumption around the world"
 author: "Freddy Hernandez"
 date: "Mayo de 2018"
-output:
-  pdf_document: default
-  html_document: default
+output:  
+      html_document:  
+        keep_md: true
 ---
 
 ```{r setup, include=FALSE}
