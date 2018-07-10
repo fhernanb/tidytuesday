@@ -7,8 +7,6 @@ output:
         keep_md: true
 ---
 
-
-
 ![Figura tomada de http://phobia.wikia.com/wiki/Methyphobia](alcohol.jpg)
 
 ## Los datos
