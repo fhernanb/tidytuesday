@@ -91,6 +91,9 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
 }
@@ -134,8 +137,18 @@ $(document).ready(function () {
 <p>La base datos que se analiza aquí fue tomada de <a href="https://github.com/rfordatascience/tidytuesday/tree/master/data" class="uri">https://github.com/rfordatascience/tidytuesday/tree/master/data</a>.</p>
 <pre class="r"><code>require(readr)
 dt &lt;- read_csv(&quot;life.txt&quot;)
-dim(dt)
-dt</code></pre>
+dim(dt)</code></pre>
+<pre><code>## [1] 17894     4</code></pre>
+<pre class="r"><code>head(dt)</code></pre>
+<pre><code>## # A tibble: 6 x 4
+##   country     code   year life_expectancy
+##   &lt;chr&gt;       &lt;chr&gt; &lt;int&gt;           &lt;dbl&gt;
+## 1 Afghanistan AFG    1950            27.5
+## 2 Afghanistan AFG    1951            27.8
+## 3 Afghanistan AFG    1952            28.4
+## 4 Afghanistan AFG    1953            28.9
+## 5 Afghanistan AFG    1954            29.4
+## 6 Afghanistan AFG    1955            29.9</code></pre>
 </div>
 
 
