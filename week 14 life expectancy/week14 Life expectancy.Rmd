@@ -2,6 +2,10 @@
 output: rmarkdown::github_document
 ---
 
+```{r, echo = FALSE}
+knitr::opts_chunk$set(collapse=TRUE, comment="##", fig.retina=2, fig.path = "MyFigs/Figure-")
+```
+
 ![Figura tomada de https://www.deccanchronicle.com/nation](life.png)
 
 ## Los datos
@@ -14,7 +18,15 @@ dim(dt)
 head(dt)
 ```
 
+## Expectativa de vida en 1950 y 2015
+```{r, expectativa}
+dt1950 <- subset(dt, year == 1950)
+dt2015 <- subset(dt, year == 2015)
 
+plot(density(dt1950$life_expectancy), xlim=c(0, 120), ylim=c(0, 0.06),
+     main='Expectativa de vida')
+lines(density(dt2015$life_expectancy))
+```
 
 
 
